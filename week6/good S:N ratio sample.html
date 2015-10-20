@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<head>
+<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+<script src="jquery.js"></script>
+<style>
+body{
+  text-align:center;
+  font-family: 'Fjalla One';
+  font-size: 20px;
+  background: #e6eaf0;
+  }
+img{
+  height: 100px;
+  width: 300;
+    padding: 40px;
+  }
+button{
+  height: 40px;
+  width: 70px;
+  margin: 40px;
+  font-family: 'Fjalla One';
+  }
+input{
+  font-size:24px;
+}
+.fill{
+  background: white;
+  color: red;
+  border-bottom:2px black solid;
+  font-family:'Shadows Into Light';
+  padding:0 6px;
+  margin: 4px;
+}
+</style>
+</head>
+
+<body>
+<div class="prompt"></div>
+<button>Next</button>
+<script>
+// List of prompts for the user
+var prompts = [
+	'How to make an cake? Wanna learn to make a nice cake? Clikc next!',
+	'First! You need a big bowl',
+  'bowl.jpg',
+	'Add 3 pound flour',
+  'flour.jpg',
+  'Add 3 Liter milk',
+  'milk.jpg',
+  'Of course you need some butter',
+  'butter.jpg',
+  'If you want your cake taste different, add some spices',
+  'spice.jpg'
+   ];
+
+// Keep track of current prompt we're on
+var currentPrompt = 1;
+
+// A function that will call the next prompt
+var nextPrompt = function() {
+    if(currentPrompt < prompts.length) {
+		// put first prompt in all html elements with class
+		$('.prompt').html(prompts[currentPrompt]+'<div><img src=\''+prompts[currentPrompt+1]+'\'></div>');
+		// move the next prompt into variable currentPrompt
+		currentPrompt = currentPrompt + 2;
+  }
+
+}
+
+//puts user answers into HTML
+
+// run nextPrompt function when button is clicked
+$('button').click(function() {
+	nextPrompt();
+});
+
+// Show the first prompt as soon as js loads
+$('.prompt').html(prompts[0]);
+</script>
+
+</body>
