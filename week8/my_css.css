@@ -46,10 +46,12 @@
     width:400px;
   }
   .b{
-    display:none;
+    left:0px;
+    top:0px;
   }
   .c{
-    display: none;
+    left:0px;
+    top:0px;
   }
 }
 
@@ -61,10 +63,11 @@
     width:400px;
   }
   .b{
-    width:400px;
+    left:0px;
+    top:0px;
   }
   .c{
-    display: none;
+    left:400px;
   }
 }
 @media (min-width:1200px){
