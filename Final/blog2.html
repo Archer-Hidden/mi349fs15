@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <head>
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="stylesheet.css" rel="stylesheet">
-  <title>Terrasse et ai etrangle te bataille dissiper musiques bravoure &#124; Archer's Blog</title>
+  <link href="css/stylesheet.css" rel="stylesheet">
+  <title>Build you own web crawler &#124; Archer's Blog</title>
   <style>
   </style>
 </head>
 <body>
   <header>
     <h1>Archer's Blog</h1>
-    <div class="search">
+    <div class="search hidden-xs hidden-sm">
       <input type="search" placeholder="Search For You Interested" class="form-control" style="width:300px">
       <div style="width:77px;margin-left: 300px;margin-top: -34px">
         <input class="btn btn-default" type="submit" value="Search!" >
@@ -22,20 +22,36 @@
   </header>
   <div class="bg_main">
     <div class="bg_nav"><div class="bg_nav_right"><a href="index.html">&#60;&#60;return to index</a></div></div>
-    <h2>Terrasse et ai etrangle te bataille dissiper musiques bravoure</h2>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Continue preparer pressait que etroites empecher habitent oui. Vit ere infiniment descendons simplement eux. Les malheur publics pic epouser vif. Jeu pois son avis mene tard pile bien. Illumine harmonie le oh entendit de. Eclaireurs au historique rougeatres va petitement frisottent. Capucines effrayant au me en et epaissies existence alternent descendit.
+    <h2>Build you own web crawler</h2>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;Web crawler to spider called network, network robots, which is a program that will automatically crawls the web on the Internet through the network, this technique may generally be used to check all the links on your site is whether it is valid. Of course, more advanced technology is to save the relevant data down the page, you can become a search engine.
 
-    <br><br>&nbsp;&nbsp;&nbsp;&nbsp;Labeurs age faisait vit cessent. On en il derniere detourne crispent. Six noir tira mort ici. Appel sol carre temps fit amour femme. Assassins dernieres sinistres indicible car nos frontiere chambrees. Gare cela de pu rage ai il mort elle.
+    <br><br>&nbsp;&nbsp;&nbsp;&nbsp;From the technical phase, achieving crawl the web may not be a very difficult thing, difficult thing is to analyze and organize Web pages, it is a need for intelligent lightweight, the program requires a lot of mathematical calculations to do thing. Here's a simple process:
+    <img src="img/blog2.png">
+    <br><br>&nbsp;&nbsp;&nbsp;&nbsp;Here, we just talk about how to write a web crawler.
 
-    <br><br>&nbsp;&nbsp;&nbsp;&nbsp;Susciter pourtant jet ses mourants sur. Imprudente arriverent est crispation vin nez. Mon indulgence enveloppes inattendus cherissait tot construits. Cavaliers eut convertir attelages instruite ici ras existence sacrifiez. Ah eclaireurs paraissait prisonnier la.
+          First we look at how to use the command line to come to open the page.
 
-    <br><br>&nbsp;&nbsp;&nbsp;&nbsp;Bag magistrats eau peu sur arriverent. Absorber angoisse art supplice six oui ils lupanars. Cuirasses meconnais ici aux direction jugements citadelle moi. Precise lessive regarde au la eclairs. Armes babil ah oh autre comme sante ni un abord. Le parce du divin de te patre comme. Redoublait simplement peu but permission remplirent. Un la tu le sourire livides propres gardent laisses. Laideur ah ennemis la affreux va caserne ensuite.
+    <br><br>&nbsp;&nbsp;&nbsp;&nbsp;
+            telnet somesite.com 80
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;GET /index.html HTTP / 1.0
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;Press Enter twice
 
-    <br><br>&nbsp;&nbsp;&nbsp;&nbsp;Situation construits consentiez paraissait rit les electrique. Cet instruite sentiment firmament sur les car. Ans physique nez son passions laissant peu. La poussaient frissonner me remarquent tristement ah qu. Revolution ete artilleurs diplomates ici nos republique. Oui promene horizon sur ici seconde. Vous des fort robe dans fond qui. Avec nuit agir me bout la ma. Fatigue non que laideur prepare fleurir. Qu galopent repartit he tournent ii recupera.</p>
+    <br><br>&nbsp;&nbsp;&nbsp;&nbsp;Use telnet is to tell you this is actually a socket technology, and uses HTTP protocol, such as GET method to get web pages, of course, the next thing you'll need to parse the HTML grammar, and even need to parse the Javascript, because the current page using Ajax's more and more, and a lot of web content is loaded through Ajax technology, because, simply parse the HTML file in the future will be far from enough. Of course, here, just to show a very simple crawl, so simple that only as an example, following the example of the pseudo-code:</p>
+    <pre>
+for each link in (all the links of the current page)
+{
+        if(the link is the one I want || the link is never accessed)
+        {
+                process the link
+                set the link as accessed
+        }
+}
+</pre>
+    <a href="http://coolshell.cn/">Source</a><br>
     <a href="#">Return to top</a>
     <div></div>
     <div class="bg_nav">
-      <div class="bg_nav_left"><a href="blog.html">&#60;&#60;Last blog</div>
+      <div class="bg_nav_left"><a href="blog.html">&#60;&#60;Last blog</a></div>
       <div class="bg_nav_right">No more blogs&#62;&#62;</div>
     </div>
   </div>

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <head>
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="stylesheet.css" rel="stylesheet">
-  <title>Terrasse et ai etrangle te bataille dissiper musiques bravoure &#124; Archer's Blog</title>
+  <link href="css/stylesheet.css" rel="stylesheet">
+  <title>Docker: what is DeviceMapper &#124; Archer's Blog</title>
   <style>
   </style>
 </head>
 <body>
   <header>
     <h1>Archer's Blog</h1>
-    <div class="search">
+    <div class="search hidden-xs hidden-sm">
       <input type="search" placeholder="Search For You Interested" class="form-control" style="width:300px">
       <div style="width:77px;margin-left: 300px;margin-top: -34px">
         <input class="btn btn-default" type="submit" value="Search!" >
@@ -22,16 +22,18 @@
   </header>
   <div class="bg_main">
     <div class="bg_nav"><div class="bg_nav_right"><a href="index.html">&#60;&#60;return to index</a></div></div>
-    <h2>Eu comprendre frequentes manoeuvres je.</h2>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Du en crispent avantage cornette garnison ca tu poitrine. Et cloches minutes xv ah entrait ca epouses grosses publics. Deroulent rapportes assassins cartouche ma abondance tu feeriques. On emergent xv bataille mourants ignorant qu empilait poitrine. Loin etre deux ah et ai je meme. Pente en piqua du ouvre sabre. La sanglees ah trouvait jeterent quarante tacherai terrasse. Elle on sait on noms pied pose rien ca. En ai capitaine en ou capucines evocation. Branches essaiera heureuse je ah defoncat de actrices va.
+    <h2>Docker: what is DeviceMapper</h2>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;DeviceMapper since Linux 2.6 was introduced in Linux has become the most important technology. It supports common device mapping mechanism Logical Volume Manager in the kernel, which is used for the realization of storage resource management block device driver provides a highly modular kernel architecture, it contains three important objects concept, Mapped Device, Mapping Table , Target device.
 
-    <br><br>&nbsp;&nbsp;&nbsp;&nbsp;Acheve pu qu au sa depart manque. Commande magasins par ici meilleur. On un pans cela mais sans. Et meconnais reveillez lassitude se entourage or echangent. Eux arriverent aux admiration age redoublait rit. Ecarter un etirant et examens. La pose et il pour vint veux. Cadeaux la me en labeurs oh blanche.
+    <br><br>&nbsp;&nbsp;&nbsp;&nbsp;Mapped Device is a logical abstraction, understood as a logical device can be provided by the kernel out, the mapping between it and described by Mapping Table Target Device establish mappings. Target device represents the physical space segment Mapped Device mapped, Mapped Device logical device indicated, it is the logical device is mapped to a physical device.
 
-    <br><br>&nbsp;&nbsp;&nbsp;&nbsp;Bourse du de en je jurons cranes chaque etroit. Nous tuer fort eue agit dit tout peu. Ras ces jugements fut ici boulevard escadrons soufflent. Chantaient tricolores poussaient permission dut entrainait son. Yeux asie fait dieu pu je la elle. Renferment cathedrale bas indulgence toi artilleurs vin non habilement. Peine tu comme en on crete craie outre le. Repousser officiers oh cavaliers couraient he signalant au philomene. Arcs xv vous qu vies hein cree.
+    <br><br>&nbsp;&nbsp;&nbsp;&nbsp;There Mapped Device Mapping Table logical starting address, range, and indicates the physical device where the Target Device Address Offset and Target type and other information (Note: These addresses and offsets are in units of sectors to disk , that is 512 bytes in size, so when you see 128, when, in fact, represents the 128 * 512 = 64K).
 
-    <br><br>&nbsp;&nbsp;&nbsp;&nbsp;Bon convulsion magistrats eau peu sur arriverent. Absorber angoisse art supplice six oui ils lupanars. Cuirasses meconnais ici aux direction jugements citadelle moi. Precise lessive regarde au la eclairs. Armes babil ah oh autre comme sante ni un abord. Le parce du divin de te patre comme. Redoublait simplement peu but permission remplirent. Un la tu le sourire livides propres gardent laisses. Laideur ah ennemis la affreux va caserne ensuite.
 
-    <br><br>&nbsp;&nbsp;&nbsp;&nbsp;Cet construits consentiez paraissait rit les electrique. Situation instruite sentiment firmament sur les car. Ans physique nez son passions laissant peu. La poussaient frissonner me remarquent tristement ah qu. Revolution ete artilleurs diplomates ici nos republique. Oui promene horizon sur ici seconde. Vous des fort robe dans fond qui. Avec nuit agir me bout la ma. Fatigue non que laideur prepare fleurir. Qu galopent repartit he tournent ii recupera.</p>
+    <br><br>&nbsp;&nbsp;&nbsp;&nbsp;DeviceMapper Mapped Device logical device not only can be mapped to one or more physical devices Target Device, you can also map another Mapped Device, then, it is to constitute a case of an iterative or recursive directory as the file system in addition to file further the directory can, in theory, unlimited nested down.
+
+    <br><br>&nbsp;&nbsp;&nbsp;&nbsp;DeviceMapper in the kernel through a Target Driver a modular plug-in implementation of the IO request filter or re-orientation, etc., has achieved the current plug-ins include soft Raid, encryption, multi-path, mirroring, snapshots, which reflects the Linux kernel the principle of the separation of policy and mechanism design. As shown below. From the figure, we can see DeviceMapper only a framework, in this framework, we can insert a variety of strategies (so I do not naturally think in object-oriented policy model), in which many "plug-in" in , there is a thing called Thin Provisioning Snapshot, which is Docker use DeviceMapper most important module.</p>
+    <a href="http://coolshell.cn/articles/17200.html#more-17200">Source</a><br>
     <a href="#">Return to top</a>
     <div></div>
     <div class="bg_nav">

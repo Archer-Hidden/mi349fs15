@@ -5,7 +5,7 @@ body{
 }
 header {
   text-align: center;
-  background: url('1.jpg') no-repeat center center fixed;
+  background: url('../img/1.jpg') no-repeat center center fixed;
   background-size:cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -56,7 +56,7 @@ article {
 .cv {
   top:200px;
   position: relative;
-  background: url('2.jpg');
+  background: url('../img/2.jpg');
   background-size: cover;
   width:1350px;
   height:400px;
@@ -85,7 +85,7 @@ article {
 .blog {
   top:200px;
   position: relative;
-  background: url('3.jpg');
+  background: url('../img/3.jpg');
   background-size: cover;
   width:1350px;
   height:600px;
@@ -115,7 +115,7 @@ article {
 .project {
   top:200px;
   position: relative;
-  background: url('4.jpg');
+  background: url('../img/4.jpg');
   background-size: cover;
   width:1350px;
   height:600px;
@@ -178,13 +178,175 @@ article {
 .bg_nav_right{
   float:right;
 }
-@media (max-width: 500px) {
+.hidden_but{
+  display: none;
+}
+.hidden_but2{
+  display: none;
+}
+.hidden_but3{
+  display: none;
+}
+@media (max-width: 768px) and (min-width:400px) {
+  header{
+    width:768px;
+    height:160px;
+  }
   h1 {
     font-size: 36px;
     padding: 5px;
+    text-align: center;
   }
-  li {
-    padding: 5px;
+  ul{
+    width:768px;
+  }
+  .cv{
+    top:140px;
+    width:768px;
+  }
+  .cv_content{
+    width:768px;
+  }
+  .cv_cc{
+    width:768px;
+  }
+  .cv_button{
+    display: none;
+  }
+  .blog{
+    top:140px;
+    width:768px;
+    height: auto;
+  }
+  .blog_content{
+    width:768px;
+    height: auto;
+  }
+  .blog_cc{
+    width:768px;
+    height: auto;
+  }
+  .blog_m{
+    font-size: 34px;
+    padding:50px;
+  }
+  .project{
+    top:140px;
+    width:768px;
+    height: auto;
+  }
+  .proj_content{
+    width:768px;
+    height: auto;
+  }
+  .proj_cc{
+    width:768px;
+    height: auto;
+  }
+  .proj_m{
+    font-size: 34px;
+    padding:50px;
+  }
+  .bg_main{
+    width:768px;
+    left:0px;
+  }
+  .hidden_but{
     display: block;
+    top:-7px;
+    position: relative;
+  }
+  .hidden_but2{
+    display: block;
+    top:-34px;
+    position: relative;
+  }
+  .hidden_but3{
+    display: block;
+    top:-7px;
+    position: relative;
+  }
+}
+@media (max-width:401px) {
+  header{
+    width:400px;
+    height:160px;
+  }
+  h1 {
+    font-size: 36px;
+    padding: 5px;
+    text-align: center;
+  }
+  ul{
+    width:400px;
+  }
+  .cv{
+    top:140px;
+    width:400px;
+    height:auto;
+  }
+  .cv_content{
+    width:400px;
+    height:auto;
+  }
+  .cv_cc{
+    width:400px;
+    height:auto;
+  }
+  .cv_button{
+    display: none;
+  }
+  .blog{
+    top:140px;
+    width:400px;
+    height: auto;
+  }
+  .blog_content{
+    width:400px;
+    height: auto;
+  }
+  .blog_cc{
+    width:400px;
+    height: auto;
+  }
+  .blog_m{
+    font-size: 34px;
+    padding:50px;
+  }
+  .project{
+    top:140px;
+    width:400px;
+    height: auto;
+  }
+  .proj_content{
+    width:400px;
+    height: auto;
+  }
+  .proj_cc{
+    width:400px;
+    height: auto;
+  }
+  .proj_m{
+    font-size: 16px;
+    padding:50px;
+  }
+  .bg_main{
+    width:400px;
+    left:0px;
+  }
+  .hidden_but{
+    display: block;
+    top:-7px;
+    position: relative;
+  }
+  .hidden_but2{
+    display: block;
+    top:-34px;
+    position: relative;
+  }
+  .hidden_but3{
+    display: block;
+    top:-44px;
+    position: relative;
   }
 }
